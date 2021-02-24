@@ -25,12 +25,15 @@ export const StyledHamburgerIcon = styled.div`
   display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
-  width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 25px;
-  right: 20px;
+  top: 35px;
+  right: 30px;
   z-index: 20;
+  @media (min-width: 375px) {
+    top: 25px;
+    right: 10px;
+  }
   @media (min-width: 769px) {
     display: none;
   }
