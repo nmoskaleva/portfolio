@@ -7,7 +7,7 @@ export const MainContent = styled.div`
   color: rgb(48, 47, 47);
   background-color: white;
   @media (min-width: 769px) {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     padding: 1rem 2rem 0.5rem;
   }
   ul > li {

@@ -21,8 +21,11 @@ export const MainWrapper = styled.div`
     `}
 
   > a:hover {
-    background-color: rgb(231, 231, 231);
+    background-color: white;
+    color: black;
+    transition: ease-in 300ms;
   }
+
   @media (min-width: 375px) {
     width: 75%;
     grid-auto-rows: 90px;

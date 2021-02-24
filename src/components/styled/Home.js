@@ -5,11 +5,10 @@ export const PageTitle = styled.h2`
   grid-row: 1/2;
   display: flex;
   align-self: center;
-  padding: 0.1rem 0.7rem;
-  font-size: 0.8rem;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  padding: 0.1rem 1rem;
+  text-transform: uppercase;
   @media (min-width: 769px) {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -17,13 +16,17 @@ export const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   border-top: 1px solid black;
   border-left: 1px solid black;
   padding: 7px;
+  @media (min-width: 769px) {
+    font-size: 1rem;
+  }
 
   &.withContent {
+    ${'' /* background-color: rgba(255, 255, 255, 0.9); */}
     background-color: white;
   }
 
@@ -34,13 +37,5 @@ export const Box = styled.div`
       grid-row: 4;
       grid-column: 1;
     }
-  }
-
-  ${
-    '' /* &#year {
-    grid-row: -1;
-    grid-column: -1;
-    font-size: 2rem;
-  } */
   }
 `;

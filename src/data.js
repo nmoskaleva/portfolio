@@ -52,7 +52,7 @@ const homePageLinks = [
   { title: null, link: null },
   { title: null, link: null },
   { title: null, link: null },
-  { title: 'hello', link: '/hello', id: 'hello' },
+  { title: null, link: null },
   { title: null, link: null },
   { title: 'Projects', link: '/projects', id: 'projects' },
   { title: null, link: null },
