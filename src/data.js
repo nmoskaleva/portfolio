@@ -24,7 +24,7 @@ const projects = [
     name: 'The Orchard',
     id: 'orchard',
     description:
-      'A webpage featuring smooth scroll, fixed navbar, and a responsive image gallery (plant-based).',
+      'A webpage featuring smooth scroll, fixed navbar, and a responsive image gallery.',
     'built-with': 'Javascript, CSS.',
     github: 'https://github.com/nmoskaleva/orchard',
     demo: 'https://nmoskaleva.github.io/orchard/index.html',
@@ -52,7 +52,7 @@ const homePageLinks = [
   { title: null, link: null },
   { title: null, link: null },
   { title: null, link: null },
-  { title: null, link: null },
+  { title: 'hello', link: '/hello', id: 'hello' },
   { title: null, link: null },
   { title: 'Projects', link: '/projects', id: 'projects' },
   { title: null, link: null },
