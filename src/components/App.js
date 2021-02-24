@@ -1,12 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { LayoutWithNav, HomeLayout } from './Layouts';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { HomeLayout, PatternedLayout, PlainLayout } from './Layouts';
 import Home from './Home';
+import Hello from './Hello';
 import About from './About';
 import Contact from './Contact';
 import Projects from './Projects';
 import Skills from './Skills';
-import GlobalStyle from './styled/GlobalStyle';
+import GlobalStyles from './styled/GlobalStyle';
 
 function App() {
   function RouteWrapper({ component: Component, layout: Layout, ...rest }) {
@@ -24,37 +26,57 @@ function App() {
 
   return (
     <Router>
-      <GlobalStyle />
-      <Switch>
-        <RouteWrapper
-          exact
-          path='/about'
-          component={About}
-          layout={LayoutWithNav}
-        />
-        <RouteWrapper
-          exact
-          path='/contact'
-          component={Contact}
-          layout={LayoutWithNav}
-        />
-        <RouteWrapper
-          exact
-          path='/projects'
-          component={Projects}
-          layout={LayoutWithNav}
-        />
+      <GlobalStyles />
+      <Route
+        render={({ location }) => (
+          <TransitionGroup>
+            <CSSTransition key={location.key} classNames='page' timeout={500}>
+              <Switch location={location}>
+                <RouteWrapper
+                  exact
+                  path='/about'
+                  component={About}
+                  layout={PatternedLayout}
+                />
+                <RouteWrapper
+                  exact
+                  path='/contact'
+                  component={Contact}
+                  layout={PatternedLayout}
+                />
+                <RouteWrapper
+                  exact
+                  path='/projects'
+                  component={Projects}
+                  layout={PlainLayout}
+                />
 
-        <RouteWrapper
-          exact
-          path='/skills'
-          component={Skills}
-          layout={LayoutWithNav}
-        />
+                <RouteWrapper
+                  exact
+                  path='/skills'
+                  component={Skills}
+                  layout={PatternedLayout}
+                />
 
-        <RouteWrapper exact path='/' component={Home} layout={HomeLayout} />
-        <Route exact path='/' component={Home} />
-      </Switch>
+                <RouteWrapper
+                  exact
+                  path='/'
+                  component={Home}
+                  layout={HomeLayout}
+                />
+
+                <RouteWrapper
+                  exact
+                  path='/hello'
+                  component={Hello}
+                  layout={HomeLayout}
+                />
+                <Route exact path='/' component={Home} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        )}
+      />
     </Router>
   );
 }

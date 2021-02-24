@@ -1,16 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import { StyledLink, LocationDiv, PageTitle } from './styled/Home';
+import { PageTitle, Box } from './styled/Home';
 import { homePageLinks } from '../data';
 
 const Home = () => {
   const homePage = homePageLinks.map((link) =>
     link.title !== null ? (
-      <StyledLink to={link.link} key={link.id} id={link.id}>
-        <div>{link.title}</div>
-      </StyledLink>
+      <Box
+        as={Link}
+        to={link.link}
+        key={link.id}
+        id={link.id}
+        className='withContent'
+      >
+        {link.title}
+      </Box>
     ) : (
-      <b key={uuidv4()}></b>
+      <Box key={uuidv4()}></Box>
     )
   );
 
@@ -18,7 +25,9 @@ const Home = () => {
     <>
       <PageTitle>Full-Stack Web Development</PageTitle>
       {homePage}
-      <LocationDiv>San Diego, CA</LocationDiv>
+      <Box id='location' className='withContent'>
+        San Diego, CA
+      </Box>
     </>
   );
 };

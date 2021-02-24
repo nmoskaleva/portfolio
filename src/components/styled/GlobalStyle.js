@@ -17,11 +17,12 @@ ul {
   list-style: none;
   text-align: center;
   width: 100%;
+  background-color: white;
 }
 
 ul > li {
   display: inline-block;
-  padding-right: 3rem;
+
 }
 
 a,
@@ -31,6 +32,6 @@ a:visited,
 a:link,
 a:active {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: tomato;
 }
 `;

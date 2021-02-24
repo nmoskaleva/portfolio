@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const ProjectImage = styled.div`
   > img{
-    width: 100%;
+  width: 100%;
   padding-top: 3px;
   margin-top: -5px;
-  height: 50vh;
+  height: 35vh;
   object-fit: cover;
   object-position: top left;
   }

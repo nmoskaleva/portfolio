@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const PageTitle = styled.h2`
   grid-column: 1/-1;
@@ -14,29 +13,34 @@ export const PageTitle = styled.h2`
   }
 `;
 
-export const MainContent = styled.div`
-  padding: 0.5rem 1.5rem;
-  font-size: 0.8rem;
-  line-height: 1.1;
-  color: rgb(48, 47, 47);
-  @media (min-width: 769px) {
-    font-size: 0.95rem;
-    padding: 1rem 2rem 0.5rem;
-  }
-`;
+export const Box = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  padding: 7px;
 
-export const StyledLink = styled(Link)`
-  &:hover,
-  &a:hover {
-    background-color: rgb(231, 231, 231);
+  &.withContent {
+    background-color: white;
   }
-`;
 
-export const LocationDiv = styled.div`
-  grid-row: 6;
-  grid-column: 1;
-  @media (min-width: 769px) {
-    grid-row: 4;
+  &#location {
+    grid-row: 6;
     grid-column: 1;
+    @media (min-width: 769px) {
+      grid-row: 4;
+      grid-column: 1;
+    }
+  }
+
+  ${
+    '' /* &#year {
+    grid-row: -1;
+    grid-column: -1;
+    font-size: 2rem;
+  } */
   }
 `;
