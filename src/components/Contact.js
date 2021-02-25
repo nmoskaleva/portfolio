@@ -4,17 +4,35 @@ import { StyledForm, FormFields, FormButton } from './styled/Contact';
 const Contact = () => {
   return (
     <section>
-      <StyledForm name='contact' method='POST' data-netlify='true'>
-        <FormFields>
-          <label htmlFor='name'>Name</label>
-          <input type='text' name='name' id='name' required />
-          <label htmlFor='email '>Email</label>
-          <input type='email' name='email' id='email' required />
-          <label htmlFor='message'>Message</label>
-          <textarea name='message' id='message' rows='3' required></textarea>
-        </FormFields>
-        <FormButton type='submit'>Send Message</FormButton>
-      </StyledForm>
+      <form name='contact' method='POST' data-netlify='true'>
+        <p>
+          <label>
+            Your Name: <input type='text' name='name' />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email: <input type='email' name='email' />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Role:{' '}
+            <select name='role[]' multiple>
+              <option value='leader'>Leader</option>
+              <option value='follower'>Follower</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name='message'></textarea>
+          </label>
+        </p>
+        <p>
+          <button type='submit'>Send</button>
+        </p>
+      </form>
     </section>
   );
 };
