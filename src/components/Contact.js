@@ -4,7 +4,7 @@ import { StyledForm, FormFields, FormButton } from './styled/Contact';
 const Contact = () => {
   return (
     <section>
-      <StyledForm name='contact' action='POST' data-netlify='true'>
+      <StyledForm name='contact' method='POST' data-netlify='true'>
         <FormFields>
           <label htmlFor='name'>Name</label>
           <input type='text' name='name' id='name' required />
