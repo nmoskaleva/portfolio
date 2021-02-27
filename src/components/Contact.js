@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { StyledForm, FormFields, FormButton } from './styled/Contact';
 
 const Contact = () => {
-  const [success, setSuccess] = useState(false);
-  useEffect(() => {
-    if (window.location.search.includes('success=true')) {
-      setSuccess(true);
-    }
-  }, []);
-
   return (
     <section>
-      {success && <p style={{ color: 'green' }}>Thanks for your message! </p>}
       <StyledForm
         name='contact'
         method='POST'
-        action='/contact/?success=true'
+        action='/thank-you'
         data-netlify='true'
       >
         <input type='hidden' name='form-name' value='contact' />

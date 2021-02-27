@@ -1,13 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { HomeLayout, PatternedLayout, PlainLayout } from './Layouts';
+import GlobalStyles from './styled/GlobalStyle';
+import {
+  HomeLayout,
+  PatternedLayout,
+  PlainLayout,
+  ThankYouLayout
+} from './Layouts';
 import Home from './Home';
 import About from './About';
-import Contact from './Contact';
 import Projects from './Projects';
 import Skills from './Skills';
-import GlobalStyles from './styled/GlobalStyle';
+import Contact from './Contact';
+import ThankYou from './ThankYou';
 
 function App() {
   function RouteWrapper({ component: Component, layout: Layout, ...rest }) {
@@ -39,24 +45,28 @@ function App() {
                 />
                 <RouteWrapper
                   exact
-                  path='/contact'
-                  component={Contact}
-                  layout={PatternedLayout}
-                />
-                <RouteWrapper
-                  exact
                   path='/projects'
                   component={Projects}
                   layout={PlainLayout}
                 />
-
                 <RouteWrapper
                   exact
                   path='/skills'
                   component={Skills}
                   layout={PatternedLayout}
                 />
-
+                <RouteWrapper
+                  exact
+                  path='/contact'
+                  component={Contact}
+                  layout={PatternedLayout}
+                />
+                <RouteWrapper
+                  exact
+                  path='/thank-you'
+                  component={ThankYou}
+                  layout={ThankYouLayout}
+                />
                 <RouteWrapper
                   exact
                   path='/'
