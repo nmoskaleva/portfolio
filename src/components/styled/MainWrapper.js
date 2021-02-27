@@ -6,7 +6,7 @@ export const MainWrapper = styled.div`
   grid-template-columns: repeat(3, minmax(25px, 1fr));
   grid-template-rows: 0.5fr repeat(5, 1fr);
   width: 90%;
-  min-height: 85vh;
+  min-height: 80vh;
   margin: 0 auto;
   margin-top: 7%;
   border: 3px solid rgb(0, 0, 0);
@@ -30,6 +30,7 @@ export const MainWrapper = styled.div`
     width: 75%;
     grid-auto-rows: 90px;
   }
+
   @media (min-width: 430px) {
     font-size: 0.65rem;
     max-width: 500px;
