@@ -3,9 +3,11 @@ import Slider from './Carousel/Slider';
 
 const Projects = () => {
   return (
-    <section>
-      <Slider />
-    </section>
+    <>
+      <section>
+        <Slider />
+      </section>
+    </>
   );
 };
 
