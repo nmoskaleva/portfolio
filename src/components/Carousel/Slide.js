@@ -9,10 +9,7 @@ import {
 const Slide = ({ content }) => {
   return (
     <StyledSlide>
-      <Image src={content.img}></Image>
-      {/*  <ProjectImage>
-        <img src={project.img} alt='demo' />
-      </ProjectImage> */}
+      <Image src={content.img} alt='demo'></Image>
       <ProjectDescription>
         <h2>{content.name}</h2>
         <Links>

@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { StyledSlider, SliderContent } from '../styled/Carousel/Slider';
 import Slide from './Slide';
 import Arrow from './Arrow';
-import { projects } from '../../data';
 
-const Slider = (props) => {
+const Slider = ({ items }) => {
   const getWidth = () => window.innerWidth;
 
   const [state, setState] = useState({
@@ -16,7 +15,7 @@ const Slider = (props) => {
   const { translate, transition, activeIndex } = state;
 
   const nextSlide = () => {
-    if (activeIndex === projects.length - 1) {
+    if (activeIndex === items.length - 1) {
       return setState({
         ...state,
         translate: 0,
@@ -35,8 +34,8 @@ const Slider = (props) => {
     if (activeIndex === 0) {
       return setState({
         ...state,
-        activeIndex: props.slides.length - 1,
-        translate: (props.slides.length - 1) * getWidth()
+        activeIndex: items.length - 1,
+        translate: (items.length - 1) * getWidth()
       });
     }
 
@@ -52,14 +51,14 @@ const Slider = (props) => {
       <SliderContent
         translate={translate}
         transition={transition}
-        width={getWidth() * projects.length}
+        width={getWidth() * items.length}
       >
-        {projects.map((project, i) => (
+        {items.map((item, i) => (
           <Slide
-            key={project.id}
-            content={project}
-            image={project.img}
-            description={project.description}
+            key={item.id}
+            content={item}
+            image={item.img}
+            description={item.description}
           />
         ))}
       </SliderContent>

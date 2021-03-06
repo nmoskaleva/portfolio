@@ -1,11 +1,12 @@
 import React from 'react';
 import Slider from './Carousel/Slider';
+import { projects } from '../data';
 
 const Projects = () => {
   return (
     <>
       <section>
-        <Slider />
+        <Slider items={projects} />
       </section>
     </>
   );
