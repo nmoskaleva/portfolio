@@ -6,4 +6,7 @@ export const ThankYouSection = styled.section`
   align-items: center;
   font-size: 0.9rem;
   padding: 10px;
+  a {
+    color: tomato;
+  }
 `;
