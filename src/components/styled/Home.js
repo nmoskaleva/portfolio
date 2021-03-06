@@ -24,7 +24,7 @@ export const Box = styled.div`
   }
 
   &.withContent span {
-    padding: 15px;
+    padding: 15px 10px;
     border: 2px solid rgb(33, 66, 81);
     border-radius: 5px;
     color: tomato;
@@ -35,6 +35,9 @@ export const Box = styled.div`
       border: none;
       font-size: larger;
       transition: ease-in 400ms;
+    }
+    @media (min-width: 769px) {
+      padding: 15px;
     }
   }
 
