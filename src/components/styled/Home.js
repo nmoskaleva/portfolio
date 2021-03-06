@@ -18,16 +18,24 @@ export const Box = styled.div`
   align-items: center;
   font-size: 0.9rem;
   text-transform: uppercase;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
   padding: 7px;
   @media (min-width: 769px) {
     font-size: 1rem;
   }
 
-  &.withContent {
-    ${'' /* background-color: rgba(255, 255, 255, 0.9); */}
+  &.withContent span {
+    padding: 15px;
+    border: 2px solid rgb(33, 66, 81);
+    border-radius: 5px;
+    color: tomato;
     background-color: white;
+    &:hover {
+      color: white;
+      background-color: rgb(33, 66, 81);
+      border: none;
+      font-size: larger;
+      transition: ease-in 400ms;
+    }
   }
 
   &#location {

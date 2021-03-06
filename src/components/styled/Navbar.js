@@ -9,9 +9,14 @@ export const Nav = styled.nav`
     justify-content: space-between;
     width: 100%;
     min-height: 65px;
-    padding: 0 20px;
     font-size: 0.9rem;
     font-family: 'Montserrat Subrayada', sans-serif;
+  }
+  ul {
+    padding: 0;
+  }
+  a {
+    color: tomato;
   }
   @media (min-width: 769px) {
     display: block;

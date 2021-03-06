@@ -5,12 +5,19 @@ export const MainContent = styled.div`
   font-size: 0.8rem;
   line-height: 1.1;
   color: rgb(48, 47, 47);
-  background-color: white;
+  span {
+    background-color: white;
+  }
   @media (min-width: 769px) {
     font-size: 0.85rem;
     padding: 1rem 2rem 0.5rem;
   }
+  ul {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
   ul > li {
+    display: inline-block;
     padding-right: 2rem;
     @media (min-width: 769px) {
       padding-right: 3rem;
@@ -19,8 +26,9 @@ export const MainContent = styled.div`
 `;
 
 export const Icon = styled.a`
+  color: black;
   &:hover {
-    color: black;
+    color: tomato;
     transition: ease-in 400ms;
   }
 `;

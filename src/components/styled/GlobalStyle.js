@@ -10,28 +10,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 0.7rem;
   background-color: rgb(232, 229, 229);
-    font-family: 'Kosugi', sans-serif;
+  font-family: 'Kosugi', sans-serif;
 }
 
 ul {
   list-style: none;
-  text-align: center;
-  width: 100%;
-  background-color: white;
-}
-
-ul > li {
-  display: inline-block;
-
 }
 
 a,
 a:focus,
 a:hover,
 a:visited,
-a:link,
-a:active {
+a:link{
   text-decoration: none;
-  color: tomato;
 }
 `;

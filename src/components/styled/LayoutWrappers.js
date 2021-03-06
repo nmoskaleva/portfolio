@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import drawing from '../../images/drawing_umecker.jpeg';
+import drawing from '../../images/sitting-woman-sketch.jpeg';
 
 export const MainWrapper = styled.div`
   display: grid;
@@ -17,14 +17,12 @@ export const MainWrapper = styled.div`
     css`
       background-image: url(${drawing});
       background-size: cover;
-      background-position: left;
+      background-repeat: no-repeat;
+      background-position: top left -50px;
+      @media (min-width: 769px) {
+        background-position: top left 200px;
+      }
     `}
-
-  > a:hover {
-    background-color: white;
-    color: black;
-    transition: ease-in 300ms;
-  }
 
   @media (min-width: 375px) {
     width: 75%;

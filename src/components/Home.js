@@ -7,14 +7,10 @@ import { homePageLinks } from '../data';
 const Home = () => {
   const homePage = homePageLinks.map((link) =>
     link.title !== null ? (
-      <Box
-        as={Link}
-        to={link.link}
-        key={link.id}
-        id={link.id}
-        className='withContent'
-      >
-        {link.title}
+      <Box key={link.id} id={link.id} className='withContent'>
+        <Link to={link.link}>
+          <span> {link.title}</span>
+        </Link>
       </Box>
     ) : (
       <Box key={uuidv4()}></Box>
