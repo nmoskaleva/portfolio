@@ -23,18 +23,20 @@ export const Box = styled.div`
     font-size: 1rem;
   }
 
-  &.withContent span {
+  &.withContent a {
     padding: 15px 10px;
     border: 2px solid rgb(33, 66, 81);
     border-radius: 5px;
     color: tomato;
     background-color: white;
-    &:hover {
-      color: white;
-      background-color: rgb(33, 66, 81);
-      border: none;
-      font-size: larger;
-      transition: ease-in 400ms;
+    @media (hover: hover) {
+      &:hover {
+        color: white;
+        background-color: rgb(33, 66, 81);
+        border: none;
+        font-size: larger;
+        transition: ease-in 400ms;
+      }
     }
     @media (min-width: 769px) {
       padding: 15px;
