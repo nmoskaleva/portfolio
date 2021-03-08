@@ -50,21 +50,3 @@ export const MainWrapper = styled.div`
     grid-row: 2/-1;
   }
 `;
-
-export const FormSuccessWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  background-color: white;
-  border: 3px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  max-width: 60%;
-  height: 30vh;
-  margin: 0 auto;
-  margin-top: 15%;
-  a:hover {
-    font-weight: bold;
-    transition: ease 0.4s;
-  }
-`;

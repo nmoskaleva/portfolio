@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainWrapper, FormSuccessWrapper } from './styled/LayoutWrappers';
+import { MainWrapper } from './styled/LayoutWrappers';
 import { Page } from './styled/Page';
 import Navbar from './Nav/Navbar';
 
@@ -33,12 +33,4 @@ const HomeLayout = ({ children }) => {
   );
 };
 
-const ThankYouLayout = ({ children }) => {
-  return (
-    <Page>
-      <FormSuccessWrapper>{children}</FormSuccessWrapper>
-    </Page>
-  );
-};
-
-export { HomeLayout, PatternedLayout, PlainLayout, ThankYouLayout };
+export { HomeLayout, PatternedLayout, PlainLayout };

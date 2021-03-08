@@ -2,12 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import GlobalStyles from './styled/GlobalStyle';
-import {
-  HomeLayout,
-  PatternedLayout,
-  PlainLayout,
-  ThankYouLayout
-} from './Layouts';
+import { HomeLayout, PatternedLayout, PlainLayout } from './Layouts';
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
@@ -65,7 +60,7 @@ function App() {
                   exact
                   path='/thank-you'
                   component={ThankYou}
-                  layout={ThankYouLayout}
+                  layout={HomeLayout}
                 />
                 <RouteWrapper
                   exact
