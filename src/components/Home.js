@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { PageTitle, Box } from './styled/Home';
-import { homePageLinks } from '../data';
+import { homePageLinks } from '../content/data';
 
 const Home = () => {
   const homePage = homePageLinks.map((link) =>

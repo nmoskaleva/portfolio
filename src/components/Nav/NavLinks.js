@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { PageTitle, LargeScreenNavbar } from '../styled/Navbar';
-import links from '../../navlinks.json';
+import links from '../../content/navlinks.json';
 
 const LargeScreenNav = () => {
   return (

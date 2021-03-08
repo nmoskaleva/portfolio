@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import drawing from '../../images/sitting-woman-sketch.jpeg';
+import drawing from '../../assets/sitting-woman-sketch.jpeg';
 
 export const MainWrapper = styled.div`
   display: grid;

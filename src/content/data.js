@@ -1,3 +1,7 @@
+import hyf from '../assets/hyf.png';
+import albums from '../assets/albums.png';
+import orchard from '../assets/orchard.png';
+
 const projects = [
   {
     name: 'HackYourFuture website',
@@ -8,7 +12,7 @@ const projects = [
     github:
       'https://github.com/nmoskaleva/hackyourfuture.dk/commits/contentful-v5',
     demo: 'https://www.hackyourfuture.dk/',
-    img: './assets/hyf.png'
+    img: hyf
   },
   {
     name: 'Albums App',
@@ -18,7 +22,7 @@ const projects = [
     'built-with': 'React, React Router, ReactCSSTransitionGroup.',
     github: 'https://github.com/nmoskaleva/albums-app',
     demo: 'https://albums-app.herokuapp.com/',
-    img: './assets/albums.png'
+    img: albums
   },
   {
     name: 'The Orchard',
@@ -28,7 +32,7 @@ const projects = [
     'built-with': 'Javascript, CSS.',
     github: 'https://github.com/nmoskaleva/orchard',
     demo: 'https://nmoskaleva.github.io/orchard/index.html',
-    img: './assets/orchard.png'
+    img: orchard
   }
 ];
 

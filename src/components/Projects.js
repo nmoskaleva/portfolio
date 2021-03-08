@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from './Carousel/Slider';
-import { projects } from '../data';
+import { projects } from '../content/data';
 
 const Projects = () => {
   return (
