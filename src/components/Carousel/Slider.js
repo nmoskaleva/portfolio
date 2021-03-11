@@ -12,7 +12,7 @@ const Slider = ({ items }) => {
     transition: 0.45
   });
 
-  const { translate, transition, activeIndex } = state;
+  const { activeIndex, translate, transition } = state;
 
   const nextSlide = () => {
     if (activeIndex === items.length - 1) {
@@ -62,8 +62,8 @@ const Slider = ({ items }) => {
           />
         ))}
       </SliderContent>
-      <Arrow left handleClick={prevSlide} />
-      <Arrow right handleClick={nextSlide} />
+      <Arrow direction='left' handleClick={prevSlide} />
+      <Arrow direction='right' handleClick={nextSlide} />
     </StyledSlider>
   );
 };

@@ -11,12 +11,10 @@ export const StyledArrow = styled.div`
   margin: 4px;
   cursor: pointer;
   transition: transform ease-in 0.1s;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   &:hover {
-      transform: scale(1.1);
-      background-color: white;
-    } 
-& svg {
-border-radius: 15px;
+    transform: scale(1.1);
+    background-color: white;
+  }
 `;
