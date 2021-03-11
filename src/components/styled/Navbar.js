@@ -62,6 +62,7 @@ export const StyledHamburgerIcon = styled.div`
   }
 `;
 
+// small screen navbar
 export const StyledNavLinks = styled.ul`
   position: fixed;
   top: 0;
@@ -81,6 +82,8 @@ export const StyledNavLinks = styled.ul`
   }
   li a {
     color: white;
+    font-family: 'Kosugi', sans-serif;
+    text-transform: uppercase;
   }
   @media (min-width: 769px) {
     display: none;

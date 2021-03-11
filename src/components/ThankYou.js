@@ -6,7 +6,7 @@ const ContactSuccess = () => {
   return (
     <ThankYouSection>
       <h1>Thanks for your message!</h1>
-      <Link to='/'>Back to homepage</Link>
+      <Link to='/'>back to homepage</Link>
     </ThankYouSection>
   );
 };
